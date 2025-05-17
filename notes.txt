@@ -1,0 +1,10 @@
+Phase 1: Collect the metadata data and the list of video id for each of the 10 env influencers. Use `get_user_profile_and_videos.py`
+@sambentley             SAM BENTLEY             Done
+@climatediva            SUMMER DEAN             Done
+@formidableveg          FORMIDABLE VEGETABLE    Done
+@dr_gilbz               ELLA GILBERT            Done
+@theclimatechick        SUZIE HICKS             Done
+@gittemary              GITTEMARIE JOHANSEN     Done
+@sagelenier             SAGE LENIER             Done
+@adambmet               ADAM MET                Done
+@karishmaclimategirl    KARISHMA PORWAL         Done

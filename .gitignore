@@ -1,0 +1,41 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.env
+*.env
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Virtual environment folders
+.venv/
+venv/
+
+# Output data
+/data
+data
+
+
+# Logs
+*.log
+
+# VSCode settings
+.vscode/
+
+# Notebook outputs
+*.ipynb
+
+# Batch API intermediate files
+batch_jobs/
+batch_results/
+
+# Temporary files
+*.tmp
+*.bak
