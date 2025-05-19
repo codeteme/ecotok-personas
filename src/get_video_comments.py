@@ -24,7 +24,7 @@ import pandas as pd
 
 ms_token = os.environ.get("ms_token", None)  # set your own ms_token
 
-async def get_comments(video_id):
+async def get_comments(username, video_id):
     async with TikTokApi() as api:
         await api.create_sessions(
             ms_tokens=[ms_token], 
@@ -58,13 +58,15 @@ async def get_comments(video_id):
         df_comments = pd.DataFrame(comments_data)
         print("\n=== Comments DataFrame ===")
         print(df_comments.head())
+        print(df_comments.shape)
         
         # Save comments as CSV
-        comments_csv_filename = f"../data/raw/comments/sambentley/tiktok_comments_{video_id}.csv"
+        comments_csv_filename = f"../data/raw/comments/{username}/tiktok_comments_{video_id}.csv"
         df_comments.to_csv(comments_csv_filename, index=False)
         print(f"Comments saved to {comments_csv_filename}")
              
 if __name__ == "__main__":
     asyncio.run(get_comments(
-        video_id = 7399683936072338720
+        username = "climatediva",
+        video_id = 7505065575429836062
     ))

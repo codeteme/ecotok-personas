@@ -1,3 +1,7 @@
+Phase 0: Identify TikTokers with massive and trending presence, whose comments sections we intend to scrape and feed to LLM to create user personas. 
+
+We referred to Climate Creators to identify most trending ecoTok influencers. The list has 12 influencers but two of these do not have tiktok accounts. The following is the list of influencers whose comment section we intend to scrape. 
+
 Phase 1: Collect the metadata data and the list of video id for each of the 10 env influencers. Use `get_user_profile_and_videos.py`
 @sambentley             SAM BENTLEY             Done
 @climatediva            SUMMER DEAN             Done
@@ -8,3 +12,11 @@ Phase 1: Collect the metadata data and the list of video id for each of the 10 e
 @sagelenier             SAGE LENIER             Done
 @adambmet               ADAM MET                Done
 @karishmaclimategirl    KARISHMA PORWAL         Done
+
+Phase 2: Iterate through the list of video ids for each of the influencers and collect all comments (as much as possible) posted on that video.
+Use ‘get_video_comments.py’
+@sambentley             SAM BENTLEY             Done    27 Videos 
+@climatediva            SUMMER DEAN             
+@gittemary              GITTEMARIE JOHANSEN     
+@sagelenier             SAGE LENIER             
+@karishmaclimategirl    KARISHMA PORWAL         
