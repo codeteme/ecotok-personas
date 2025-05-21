@@ -1,9 +1,9 @@
 import streamlit as st
 from TikTokApi import TikTokApi
 import asyncio
-import asyncio.subprocess
+import asyncio.base_subprocess
 # Suppress subprocess transport cleanup errors in closed loops
-asyncio.subprocess.BaseSubprocessTransport.__del__ = lambda self: None
+asyncio.base_subprocess.BaseSubprocessTransport.__del__ = lambda self: None
 import nest_asyncio
 nest_asyncio.apply()
 import os
