@@ -1,6 +1,11 @@
 import streamlit as st
 from TikTokApi import TikTokApi
 import asyncio
+import asyncio.subprocess
+# Suppress subprocess transport cleanup errors in closed loops
+asyncio.subprocess.BaseSubprocessTransport.__del__ = lambda self: None
+import nest_asyncio
+nest_asyncio.apply()
 import os
 import datetime
 import pandas as pd
