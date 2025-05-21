@@ -39,4 +39,3 @@ batch_results/
 # Temporary files
 *.tmp
 *.bak
-src/playground.py
