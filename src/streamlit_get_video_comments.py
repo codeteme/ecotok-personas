@@ -43,8 +43,26 @@ async def _get_comments(ms_token: str, video_id: str):
             })
         return pd.DataFrame(comments)
 
-def fetch_comments(ms_token, video_id):
-    return asyncio.run(_get_comments(ms_token, video_id))
+
+# Updated fetch_comments with event loop handling
+def fetch_comments(ms_token: str, video_id: str) -> pd.DataFrame:
+    """
+    Run the async _get_comments coroutine, but handle
+    already-running event loops inside Streamlit.
+    """
+    try:
+        # Check if there's an existing running event loop
+        asyncio.get_running_loop()
+    except RuntimeError:
+        # No running loop: safe to use asyncio.run()
+        return asyncio.run(_get_comments(ms_token, video_id))
+    else:
+        # Running inside Streamlit: create and manage a separate loop
+        loop = asyncio.new_event_loop()
+        try:
+            return loop.run_until_complete(_get_comments(ms_token, video_id))
+        finally:
+            loop.close()
 
 # --- Main UI ---
 if st.sidebar.button("Fetch Comments"):
