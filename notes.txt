@@ -2,7 +2,8 @@ Phase 0: Identify TikTokers with massive and trending presence, whose comments s
 
 We referred to Climate Creators to identify most trending ecoTok influencers. The list has 12 influencers but two of these do not have tiktok accounts. The following is the list of influencers whose comment section we intend to scrape. 
 
-Phase 1: Collect the metadata data and the list of video id for each of the 10 env influencers. Use `get_user_profile_and_videos.py`
+Phase 1: Collect the metadata data and the list of video id for each of the 10 env influencers. 
+Use `get_user_profile_and_videos.py`
 @sambentley             SAM BENTLEY             Done
 @climatediva            SUMMER DEAN             Done
 @formidableveg          FORMIDABLE VEGETABLE    Done
@@ -20,3 +21,7 @@ Use ‘get_video_comments.py’
 @gittemary              GITTEMARIE JOHANSEN     
 @sagelenier             SAGE LENIER             
 @karishmaclimategirl    KARISHMA PORWAL         
+
+
+I used playground.py to scrape comments from more than one video id at a time. 
+I used it for climatediva, for example

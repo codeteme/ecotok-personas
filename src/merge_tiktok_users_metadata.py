@@ -15,3 +15,6 @@ for file in csv_files:
 df_concatenated = pd.concat(all_df, ignore_index=True)
 
 print(df_concatenated)
+
+output_file = "../data/raw/merged_tiktok_users_metadata.csv"
+df_concatenated.to_csv(output_file)
