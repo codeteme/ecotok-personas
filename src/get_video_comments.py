@@ -17,6 +17,8 @@ Output:
 
 from TikTokApi import TikTokApi
 import asyncio
+import nest_asyncio
+nest_asyncio.apply()
 import os
 
 import datetime
