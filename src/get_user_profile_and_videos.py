@@ -41,14 +41,13 @@ cookies_list = [
 # export ms_token="ms_token_key"
 ms_token = os.environ.get("ms_token", None)  # set your own ms_token
 
-async def get_user_data(username="karishmaclimategirl", sleep_time=3):
+async def get_user_data(username="mckensea", sleep_time=3):
     async with TikTokApi() as api:
         await api.create_sessions(
             ms_tokens=[ms_token],
             num_sessions=1,
             sleep_after=sleep_time,
-            browser="chromium",
-            headless=False
+            browser=os.getenv("TIKTOK_BROWSER", "chromium")
         )
 
         try:

@@ -23,15 +23,11 @@ def merge_comments_by_creator(username):
 
     df_concatenated = pd.concat(all_df, ignore_index=True)
     print(df_concatenated.shape)
-    
-    
-    if df_concatenated.shape[0] > 5000:
-        output_file_path = f"../data/raw/comments/byCreator/{username}.csv"
-        df_concatenated.to_csv(output_file_path)
-        print(f"Total number of comments collected for {username} is {df_concatenated.shape[0]}")
-        print(f"The comments for {username} are saved in {output_file_path}")
-    else: 
-        print(f"Total number of comments collected - {df_concatenated.shape[0]} - for {username} is less than 5000.")
 
-username = "trashcaulin"
+    output_file_path = f"../data/intermediate/comments/byCreator/{username}_{df_concatenated.shape[0]}_comments.csv"
+    df_concatenated.to_csv(output_file_path)
+    print(f"Total number of comments collected for {username} is {df_concatenated.shape[0]}")
+    print(f"The comments for {username} are saved in {output_file_path}")
+
+username = "sambentley"
 print(merge_comments_by_creator(username))
